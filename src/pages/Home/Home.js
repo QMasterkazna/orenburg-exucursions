@@ -1,4 +1,11 @@
 import React from 'react';
+import ExcursionSlider from '../../components/ExcursionSlider/ExcursionsSlider'
+import AuthForm from '../../components/AuthForm/AuthForm';
+import AboutSection from '../../components/AboutSection/AboutSection';
+import ExcursionList from '../../components/ExcursionList/ExcursionList';
+import SearchSection from '../../components/SearchSection/SearchSection';
+import TestimonialsSection from '../../components/TestimonialsSection/TestimonialsSection';
+import NewsletterSection from '../../components/NewsletterSection/NewsletterSection';
 
 const Home = () => {
   return (
@@ -17,6 +24,24 @@ const Home = () => {
           </button>
         </div>
       </section>
+        {/* Секция поиска */}
+        <SearchSection />
+
+      {/* Секция "Наши экскурсии" */}
+      <ExcursionSlider />
+
+      {/* Секция авторизации */
+      <AuthForm />}
+
+      {/* Секция "О нас" */}
+        <AboutSection />
+
+        {/* Секция "Наши экскурсии" */}
+        <ExcursionList />
+        {/* Секция "Отзывы" */}
+        <TestimonialsSection />
+        {/* Секция "Новости" */
+        <NewsletterSection />}
       
       {/* Секция "Почему выбирают нас" */}
       <section className="py-16 bg-white">

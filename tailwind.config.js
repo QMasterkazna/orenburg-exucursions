@@ -18,10 +18,9 @@ module.exports = {
           600: '#e55a2b',
         }
       },
-      fontFamily: {
-        'sans': ['Inter', 'Arial', 'sans-serif'],
-      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
