@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Кастомные стили если понадобятся */
 @layer components {
   .btn-primary {
     @apply bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
@@ -14,5 +13,64 @@
   
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Стили для печати */
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  .print\:grayscale {
+    filter: grayscale(100%) !important;
+  }
+  
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+  
+  .print\:text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+  
+  .print\:h-64 {
+    height: 16rem !important;
+  }
+  
+  .print\:bg-white {
+    background: white !important;
+  }
+  
+  .print\:bg-gray-100 {
+    background: #f3f4f6 !important;
+  }
+  
+  .print\:text-black {
+    color: black !important;
+  }
+  
+  /* Скрываем элементы при печати */
+  header, footer, nav, button, a {
+    display: none !important;
+  }
+  
+  /* Убираем отступы */
+  body {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Убираем цветные элементы */
+  .text-primary-500,
+  .text-accent-500,
+  .text-yellow-400,
+  .text-green-500 {
+    color: black !important;
+  }
+  
+  .bg-primary-100 {
+    background: #f0f0f0 !important;
   }
 }

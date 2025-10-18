@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,31 +10,33 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Логотип */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-primary-500">
-              Оренбургские экскурсии
-            </h1>
+            <Link to="/">
+              <h1 className="text-xl font-bold text-primary-500">
+                Оренбургские экскурсии
+              </h1>
+            </Link>
           </div>
           
           {/* Десктопная навигация */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
+           <nav className="hidden md:flex space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
               Главная
-            </a>
-            <a href="/excursions" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
+            </Link>
+            <Link to="/excursions" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
               Наши экскурсии
-            </a>
-            <a href="/about" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
               О нас
-            </a>
-            <a href="/contacts" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
+            </Link>
+            <Link to="/contacts" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
               Контакты
-            </a>
-            <a href="/register" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
+            </Link>
+            <Link to="/register" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
               Регистрация
-            </a>
-            <a href="/account" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
+            </Link>
+            <Link to="/account" className="text-gray-700 hover:text-primary-500 font-medium transition-colors">
               Личный кабинет
-            </a>
+            </Link>
           </nav>
           
           {/* Кнопка мобильного меню */}
@@ -51,24 +54,24 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <a href="/" className="text-gray-700 hover:text-primary-500 font-medium">
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-500 font-medium">
                 Главная
-              </a>
-              <a href="/excursions" className="text-gray-700 hover:text-primary-500 font-medium">
+              </Link>
+              <Link to="/excursions" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-500 font-medium">
                 Наши экскурсии
-              </a>
-              <a href="/about" className="text-gray-700 hover:text-primary-500 font-medium">
+              </Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-500 font-medium">
                 О нас
-              </a>
-              <a href="/contacts" className="text-gray-700 hover:text-primary-500 font-medium">
+              </Link>
+              <Link to="/contacts" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-500 font-medium">
                 Контакты
-              </a>
-              <a href="/register" className="text-gray-700 hover:text-primary-500 font-medium">
+              </Link>
+              <Link to="/register" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-500 font-medium">
                 Регистрация
-              </a>
-              <a href="/account" className="text-gray-700 hover:text-primary-500 font-medium">
+              </Link>
+              <Link to="/account" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-500 font-medium">
                 Личный кабинет
-              </a>
+              </Link>
             </div>
           </nav>
         )}

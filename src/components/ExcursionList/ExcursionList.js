@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ExcursionList = () => {
   // Моковые данные для 7 экскурсий
@@ -156,9 +157,12 @@ const ExcursionList = () => {
                     <span className="text-2xl font-bold text-primary-500">{excursion.price}</span>
                     <span className="text-gray-500 text-sm ml-1">с человека</span>
                   </div>
-                  <button className="btn-primary">
-                    Забронировать
-                  </button>
+                  <Link 
+                    to={`/excursion/${excursion.id}`}
+                    className="btn-primary"
+                  >
+                    Подробнее
+                  </Link>
                 </div>
               </div>
             </div>
