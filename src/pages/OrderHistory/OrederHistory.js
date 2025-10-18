@@ -104,14 +104,16 @@ const OrderHistory = () => {
     }
   };
 
-  const getStatusStyle = (status) => {
-    switch(status) {
-      case 'Забронированные': return statusStyles.booked;
-      case 'Посещенные': return statusStyles.visited;
-      case 'Отмененные': return statusStyles.cancelled;
-      default: return statusStyles.booked;
-    }
-  };
+
+// TODO: Функция для получения стиля по статусу, загатовка
+//   const getStatusStyle = (status) => {
+//     switch(status) {
+//       case 'Забронированные': return statusStyles.booked;
+//       case 'Посещенные': return statusStyles.visited;
+//       case 'Отмененные': return statusStyles.cancelled;
+//       default: return statusStyles.booked;
+//     }
+//   };
 
   return (
     <div className="min-h-screen bg-gray-50">
