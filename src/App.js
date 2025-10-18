@@ -7,6 +7,7 @@ import ExcursionDetail from './pages/ExcursionDetail/ExcursionDetail';
 import Register from './pages/Register/Register';
 import Account from './pages/Account/Account';
 import OrderHistory from './pages/OrderHistory/OrederHistory';
+import ConfirmBooking from './pages/ConfirmBooking/ConfirmBooking';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/register' element={ <Register /> } />
             <Route path='/account' element={ <Account /> } />
             <Route path='/history' element={ <OrderHistory /> } />
+            <Route path='/confirm/:id' element={ <ConfirmBooking /> } />
           </Routes>
         </main>
         <Footer />

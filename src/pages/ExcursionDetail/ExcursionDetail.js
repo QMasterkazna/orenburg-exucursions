@@ -190,12 +190,12 @@ const ExcursionDetail = () => {
                     <div className="text-2xl font-bold text-primary-500">{excursion.price}</div>
                     <div className="text-sm text-gray-500">с человека</div>
                   </div>
-                  <Link 
+                    <Link 
                     to={`/confirm/${excursion.id}`}
                     className="btn-secondary px-8 py-3 text-lg font-semibold"
-                  >
+                    >
                     Забронировать
-                  </Link>
+                    </Link>
                 </div>
                 <p className="text-sm text-gray-500 text-center">
                   Бесплатная отмена за 24 часа до начала

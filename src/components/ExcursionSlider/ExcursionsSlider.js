@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ExcursionsSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-      const popularExcursions = [
+    const popularExcursions = [
     {
       id: 1,
       title: "Исторический центр Оренбурга",
@@ -118,9 +119,9 @@ const ExcursionsSlider = () => {
                 </div>
                 
                 {/* Кнопка */}
-                <button className="btn-secondary w-full lg:w-auto">
+                <Link to={`/excursion/${popularExcursions[currentSlide].id}`} className='btn-secondary w-full lg:w-auto'>
                   Подробнее об экскурсии
-                </button>
+                </Link>
               </div>
             </div>
           </div>
